@@ -12,37 +12,39 @@ Defining a "provided" scope in Gradle is pretty straight-forward, but it no not 
 You have to define a new configuration and add it to the various classpathes.
 
 {% highlight groovy %}
-    configurations {
-      provided
-    }
+configurations {
+  provided
+}
 
-    sourceSets {
-      main {
-        compileClasspath += configurations.provided
-      }
-      test {
-        compileClasspath += configurations.provided
-        runtimeClasspath += configurations.provided
-      }
-    }
+sourceSets {
+  main {
+    compileClasspath += configurations.provided
+  }
+  test {
+    compileClasspath += configurations.provided
+    runtimeClasspath += configurations.provided
+  }
+}
 
-    dependencies {
-      provided "javax:j2ee:1.3.1" // example
-    }
+dependencies {
+  provided "javax:j2ee:1.3.1" // example
+}
 {% endhighlight %}
 
 If you are using Gradle's [Eclipse](http://gradle.org/docs/current/userguide/eclipse_plugin.html) or [IDEA support](http://gradle.org/docs/current/userguide/idea_plugin.html),
 you must also add the configuration to the classpath of these modules:
 
-    eclipse {
-      classpath {
-        plusConfigurations += [configurations.provided]
-        noExportConfigurations += [configurations.provided]
-      }
-    }
+{% highlight gradle %}
+eclipse {
+  classpath {
+    plusConfigurations += [configurations.provided]
+    noExportConfigurations += [configurations.provided]
+  }
+}
 
-    idea {
-      module {
-        scopes.PROVIDED.plus += [configurations.provided]
-      }
-    }
+idea {
+  module {
+    scopes.PROVIDED.plus += [configurations.provided]
+  }
+}
+{% endhighlight %}
