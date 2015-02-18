@@ -11,6 +11,7 @@ are available for compilation and for test execution, but won't be put on the ru
 Defining a "provided" scope in Gradle is pretty straight-forward, but it no not exactly a one-liner:
 You have to define a new configuration and add it to the various classpathes.
 
+{% highlight groovy %}
     configurations {
       provided
     }
@@ -28,6 +29,7 @@ You have to define a new configuration and add it to the various classpathes.
     dependencies {
       provided "javax:j2ee:1.3.1" // example
     }
+{% endhighlight %}
 
 If you are using Gradle's [Eclipse](http://gradle.org/docs/current/userguide/eclipse_plugin.html) or [IDEA support](http://gradle.org/docs/current/userguide/idea_plugin.html),
 you must also add the configuration to the classpath of these modules:
