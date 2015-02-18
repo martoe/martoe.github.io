@@ -34,7 +34,7 @@ dependencies {
 If you are using Gradle's [Eclipse](http://gradle.org/docs/current/userguide/eclipse_plugin.html) or [IDEA support](http://gradle.org/docs/current/userguide/idea_plugin.html),
 you must also add the configuration to the classpath of these modules:
 
-{% highlight gradle %}
+{% highlight groovy %}
 eclipse {
   classpath {
     plusConfigurations += [configurations.provided]
