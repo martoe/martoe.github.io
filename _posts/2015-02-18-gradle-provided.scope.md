@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Gradle: "provided" Dependency Scope
+title:  "Gradle: 'provided' Dependency Scope"
 date:   2015-02-18 21:00:00
 categories: gradle
 ---
@@ -11,25 +11,23 @@ are available for compilation and for test execution, but won't be put on the ru
 Defining a "provided" scope in Gradle is pretty straight-forward, but it no not exactly a one-liner:
 You have to define a new configuration and add it to the various classpathes.
 
-{% highlight groovy %}
-configurations {
-  provided
-}
+    configurations {
+      provided
+    }
 
-sourceSets {
-  main {
-    compileClasspath += configurations.provided
-  }
-  test {
-    compileClasspath += configurations.provided
-    runtimeClasspath += configurations.provided
-  }
-}
+    sourceSets {
+      main {
+        compileClasspath += configurations.provided
+      }
+      test {
+        compileClasspath += configurations.provided
+        runtimeClasspath += configurations.provided
+      }
+    }
 
-dependencies {
-  provided "javax:j2ee:1.3.1" // example
-}
-{% endhighlight %}
+    dependencies {
+      provided "javax:j2ee:1.3.1" // example
+    }
 
 If you are using Gradle's [Eclipse](http://gradle.org/docs/current/userguide/eclipse_plugin.html) or [IDEA support](http://gradle.org/docs/current/userguide/idea_plugin.html),
 you must also add the configuration to the classpath of these modules:
