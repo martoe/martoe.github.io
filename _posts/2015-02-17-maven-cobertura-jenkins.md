@@ -2,7 +2,8 @@
 layout: post
 title:  Integrating Maven and Cobertura with Jenkins
 date:   2015-02-17 20:00:00
-categories: maven jenkins ci
+category: dev
+tags: maven jenkins ci
 ---
 After serveral happy years without Maven, I am again confronted with a complex multi-module Maven build. My task is to create a simple Jenkins job that executes the unittests continuously, including a [Cobertura](http://cobertura.github.io/cobertura/) code coverage analysis.
 

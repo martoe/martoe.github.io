@@ -2,7 +2,8 @@
 layout: post
 title:  "Sourcefile Encoding with Gradle"
 date:   2015-02-28 20:00:00
-categories: ci gradle jenkins maven
+categories: dev
+tags: gradle
 ---
 Source file encoding is another example of a tiny problem that needs a surprisingly big amount of Gradle code.
 There is a [pretty old issue](https://issues.gradle.org/browse/GRADLE-1010) for this, so if you think that the code below is too complicated (like I do), please vote for it.
