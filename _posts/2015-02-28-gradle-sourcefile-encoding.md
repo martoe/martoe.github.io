@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Sourcefile Encoding with Gradle"
-date:   2015-01-01 00:00:00
+date:   2015-02-28 20:00:00
 categories: ci gradle jenkins maven
 ---
 Source file encoding is another example of a tiny problem that needs a surprisingly big amount of Gradle code.
