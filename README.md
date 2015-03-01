@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/martoe/martoe.github.io.png)](https://travis-ci.org/martoe/martoe.github.io/)
 
-[Main site](https://martoe.github.io/)
+[Main site](http://blog.ehrnhoefer.com/)
 
 ## Getting started on Windows
 
@@ -22,3 +22,4 @@
 
 * [Jekyll Docs](http://jekyllrb.com/docs/posts/)
 * [Highlight Lexers](http://pygments.org/docs/lexers/)
+* [Comments with Disqus](https://help.disqus.com/customer/portal/articles/472138-jekyll-installation-instructions)
