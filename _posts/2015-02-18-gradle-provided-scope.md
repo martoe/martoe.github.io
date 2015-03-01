@@ -4,6 +4,7 @@ title:  "Gradle: 'provided' Dependency Scope"
 date:   2015-02-18 21:00:00
 category: dev
 tags: gradle
+comments: True
 ---
 Maven's ["provided" dependencies](http://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html#Dependency_Scope) are available for compilation and for test execution, but won't be put on the runtime classpath and won't be packaged. But unlike Maven, [Gradle doesn't support a "provided" dependency scope](https://issues.gradle.org/browse/GRADLE-784) out-of-the-box.
 
