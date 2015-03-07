@@ -24,3 +24,4 @@
 * [Highlight Lexers](http://pygments.org/docs/lexers/)
 * [Comments with Disqus](https://help.disqus.com/customer/portal/articles/472138-jekyll-installation-instructions)
 * [Import from Blogger](http://import.jekyllrb.com/docs/blogger/)
+* [Static tags](http://www.minddust.com/post/tags-and-categories-on-github-pages/)
