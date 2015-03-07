@@ -1,0 +1,13 @@
+---
+layout: post
+title: Uninstalling the Jenkins Disk-Usage Plugin
+date: '2012-07-17T13:49:00.000+02:00'
+author: martin
+tags:
+- jenkins
+modified_time: '2012-10-29T08:51:55.676+01:00'
+blogger_id: tag:blogger.com,1999:blog-987786588703208935.post-2073014427309583332
+blogger_orig_url: http://bxm-dev.blogspot.com/2012/07/getting-rid-of-jenkins-disk-usage.html
+---
+
+Since the available disk space on my <a href="http://jenkins-ci.org/">Jenkins</a> box decreased dramatically within the last days, I was looking for a way to find the "biggest" jobs - enter the <a href="https://wiki.jenkins-ci.org/display/JENKINS/Disk+Usage+Plugin">Disk Usage plugin</a>.<br /><br />After some hours(!), this plugin provided an overview of how much space is occupied by which job - very nice.<br />Not so nice (but rather annoying) is that it adds a badge to every build of the build history, which contains the space occupied by this build - that's information overflow, and (also thanks to the <a href="http://docs.codehaus.org/display/SONAR/Hudson+and+Jenkins+Plugin">Sonar plugin</a> and the <a href="https://wiki.jenkins-ci.org/display/JENKINS/Artifactory+Plugin">Artifactory plugin</a>) the build history looks like a battlefield :(<br /><br />So, how to remove this plugin? Simple delete it and restart leads to thousands of stacktraces (ClassNotFoundException), since the plugin has added itself to every single build.<br /><br />Solution:<br />Before removing the plugin, execute the following code in the Jenkins script console (available on the "Manage Jenkins" page):<br /><script class="brush:xml" type="syntaxhighlighter"><![CDATA[for (project in hudson.model.Hudson.instance.items) {    for (build in project.builds) {     for (badge in build.getActions(hudson.plugins.disk_usage.BuildDiskUsageAction.class)) {       println "Job <$project.name>, build <$build.number>: removing badge"       build.actions.remove(badge)     }     build.save()   } }  ]]></script>This removes the plugin references from all builds, so now the plugin itself can be deleted without problems.

@@ -1,0 +1,14 @@
+---
+layout: post
+title: Jenkins, subversion-ized
+date: '2012-04-18T17:51:00.002+02:00'
+author: martin
+tags:
+- CI
+- jenkins
+modified_time: '2012-04-18T17:51:19.267+02:00'
+blogger_id: tag:blogger.com,1999:blog-987786588703208935.post-4393642348339119982
+blogger_orig_url: http://bxm-dev.blogspot.com/2012/04/jenkins-subversion-ized.html
+---
+
+How to put a Jenkins installation under control of Subversion:<br /><ul><li>Add some entries to the global ignore list (the “~/.subversion/config” file):</li><blockquote>global-ignores = builds cobertura lastStable lastSuccessful nextBuildNumber *.log svnexternals.txt workspace</blockquote><li>Add the following files and directories from the JENKINS_HOME directory to subversion:</li><ul><li><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">*.xml</span> (general configuration files)</li><li><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">jobs/</span> (job configuration files)</li><li><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">plugins/*.hpi</span> (i.e. excluding the subdirectories</li><li><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">users/ </span>(email adresses, personal views etc.)</li></ul></ul>Using Subversion has some major drawbacks (so I recommend using Git instead):<br /><ul><li>whenever a new job is created, it must explicitly be added using “svn add”</li><li>likewise, a deleted job must be removed with “svn rm”</li><li>renaming a job is even more cumbersome:</li></ul><ol> <ol><li>rename the job at the GUI (which just renames the directory but leaves the SVN metadata, which kind of confuses SVN)</li><li>remove the old job from Subversion (“svn rm”)</li><li>delete the SVN metadata (the “.svn” directory) from the renamed job</li><li>add the renamed job to Subversion again (“svn add”)</li></ol></ol>As a general hint, don’t use blanks or special chars within the job names (not only because of Subversion, but also the Jenkins URLs look nicer)

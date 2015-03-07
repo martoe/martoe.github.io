@@ -1,0 +1,14 @@
+---
+layout: post
+title: UTF-8 Java Sourcefiles
+date: '2009-11-13T11:27:00.000+01:00'
+author: martin
+tags:
+- eclipse
+- maven
+modified_time: '2012-04-29T10:50:57.114+02:00'
+blogger_id: tag:blogger.com,1999:blog-987786588703208935.post-9160418165655594647
+blogger_orig_url: http://bxm-dev.blogspot.com/2009/11/utf-8-java-sourcefiles.html
+---
+
+Checklist when working with Java Sourcefiles that contain special chars (like umlauts):<br /><ul><li>Save file in UTF-8 format</li><li>Tell Eclipse to use UTF-8:<br /><code class="codespan">Project properties -&gt; Resource -&gt; Text file enconding: "Other (UTF-8)"</code></li><li>Tell Maven (pom.xml) to use UTF-8:<br /><pre class="brush:xml">&lt;properties&gt;<br />&nbsp;&nbsp;&lt;project.build.sourceEncoding&gt;UTF-8 &lt;/project.build.sourceEncoding&gt;<br />&lt;/properties&gt;<br />&lt;build&gt;<br />&nbsp;&nbsp;&lt;plugins&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;plugin&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;configuration&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;encoding&gt;UTF-8&lt;/encoding&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/configuration&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;/plugin&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;plugin&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;artifactId&gt;maven-surefire-plugin&lt;/artifactId&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;configuration&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;argLine&gt;-Dfile.encoding=UTF-8&lt;/argLine&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/configuration&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;/plugin&gt;<br />&nbsp;&nbsp;&lt;/plugins&gt;<br />&lt;/build&gt;</pre></li></ul>Note: The Surefire configuration is needed if there are unittests that read from UTF8-textfiles. Setting the property via “&lt;systemProperties&gt;” or “MAVEN_OPTS” doesn’t work.<br />For “project.build.sourceEncoding” see <a href="http://docs.codehaus.org/display/MAVENUSER/POM+Element+for+Source+File+Encoding">http://docs.codehaus.org/display/MAVENUSER/POM+Element+for+Source+File+Encoding</a><br /><div class="item_footer"><small><a href="http://bxm.at/blogs/java/utf-8-java-sourcefiles">Original post</a> blogged on <a href="http://b2evolution.net/">b2evolution</a>.</small></div>

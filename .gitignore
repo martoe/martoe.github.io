@@ -1,3 +1,5 @@
-_site
-.sass-cache
-*.iml
+/_site
+/.sass-cache
+/*.iml
+/blogger/_drafts
+/blogger/_posts

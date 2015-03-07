@@ -1,0 +1,13 @@
+---
+layout: post
+title: Nexus Authentication
+date: '2012-04-17T00:07:00.000+02:00'
+author: martin
+tags:
+- maven
+modified_time: '2012-04-17T00:07:50.984+02:00'
+blogger_id: tag:blogger.com,1999:blog-987786588703208935.post-6458994349118864309
+blogger_orig_url: http://bxm-dev.blogspot.com/2012/04/nexus-authentication.html
+---
+
+When setting up a <a href="http://www.sonatype.org/nexus/">Nexus</a> server, I am usually using two different repositories that store my own artefacts: A <i>snapshot repository</i> which is writable for everyone, and a <i>release repository</i> which is password-protected, so that only the CI user may perform write operations.  A typical <code>pom.xml</code> will contain the following sniplet: <script class="brush:xml" type="syntaxhighlighter"><![CDATA[[...] <distributionManagement>   <repository>      <id>myreleases</id>      <name>My Releases</name><!-- this repo requires authentication -->      <url>http://localhost:8080/nexus/content/repositories/releases</url>   </repository>   <snapshotRepository>      <id>mysnapshots</id>      <name>Diba Snapshots</name><!-- this repo is writable to everyone -->      <url>http://localhost:8080/nexus/content/repositories/snapshots</url>   </snapshotRepository></distributionManagement>[...]]]></script>With this, a call to "mvn deploy" is only possible if the current <code>&lt;version&gt;</code> tag ends with "-SNAPSHOT". Otherwise, the attempt to deploy will fail.  To deploy releases as well, you must add the user credentials to your <code>~/.m2/settings.xml</code> file: <script class="brush:xml" type="syntaxhighlighter"><![CDATA[[...] <servers>   <server>      <id>myreleases</id>      <username>username</username>      <password>{tw491oqnnaoHyiDU73ZWB8nnYVb6stqQDXYOpMPbCMY=}</password>   </server></servers>[...]]]></script>In this example I am using <a href="https://maven.apache.org/guides/mini/guide-encryption.html">password encryption</a>, which needs an additional <code>security-settings.xml</code> file that contains the password masterkey.

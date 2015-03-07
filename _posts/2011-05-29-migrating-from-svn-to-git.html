@@ -1,0 +1,13 @@
+---
+layout: post
+title: Migrating from SVN to Git
+date: '2011-05-29T20:41:00.000+02:00'
+author: martin
+tags:
+- git
+modified_time: '2012-04-17T00:16:24.181+02:00'
+blogger_id: tag:blogger.com,1999:blog-987786588703208935.post-737079138237423835
+blogger_orig_url: http://bxm-dev.blogspot.com/2011/05/migrating-from-svn-to-git.html
+---
+
+Just a few things that need to be discussed when switching from SVN to Git…<br /><h4>Some facts about our SVN repo</h4>The repository-in-question is quite large (more than 100.000 revisions, about 20 (Eclipse) projects, about 10 different trunks (some projects are combined under a common trunk, some porjects have their own trunk).<br />The resulting applications (EARs and WARs, as well as stanalone Java applications; about 10 alltogether) are always versioned and released together (which means that there should really be only one trunk…)<br /><h4>Q1: Repository Layout</h4><ol><li>All projects in one repo?<br />   are there performance issues with large repos?</li><li>Each project in its own repo?<br />  <ul><li>one commit across multiple repos possible?</li><li>how to track files that have been moved between projects? (we have frequent refactorings)</li><li>how to check out the whole app for a given point of time?</li></ul></li><li>A mixture of 1. and 2.?<br />  <ul><li>which projects should belong together?</li><li>this leads to a nested project structure - how can eclipse/ant deal with this?</li></ul></li></ol><div class="item_footer"><small><a href="http://bxm.at/blogs/java/migrating-from-svn-to-git">Original post</a> blogged on <a href="http://b2evolution.net/">b2evolution</a>.</small></div>

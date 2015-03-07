@@ -1,0 +1,13 @@
+---
+layout: post
+title: 'Eclipse-Template: SLF4J'
+date: '2012-03-10T14:09:00.001+01:00'
+author: martin
+tags:
+- eclipse
+modified_time: '2012-04-29T10:50:32.493+02:00'
+blogger_id: tag:blogger.com,1999:blog-987786588703208935.post-246701991683389126
+blogger_orig_url: http://bxm-dev.blogspot.com/2012/03/eclipse-template-slf4j.html
+---
+
+Preferences -&gt; Java -&gt; Editor -&gt; Templates<br /><table border="1" cellpadding="2" cellspacing="0" style="width: 595px;"> <tbody><tr> <td valign="top" width="70">Name</td> <td valign="top" width="523">ll</td></tr><tr> <td valign="top" width="70">Context</td> <td valign="top" width="523">Java</td></tr><tr> <td valign="top" width="70">Pattern</td> <td valign="top" width="523">${:import(org.slf4j.Logger,org.slf4j.LoggerFactory)}<br />private static final Logger logger = LoggerFactory.getLogger(${enclosing_type}.class);</td></tr></tbody></table>Open a Java sourcefile and enter “ll” followed by &lt;Ctrl&gt;&lt;Space&gt;, et voilà…

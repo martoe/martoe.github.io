@@ -1,0 +1,16 @@
+---
+layout: post
+title: Continuous Integration with Hudson
+date: '2007-03-12T15:17:00.000+01:00'
+author: martin
+tags:
+- quality
+- CI
+- jenkins
+- testing
+modified_time: '2012-04-17T00:13:49.653+02:00'
+blogger_id: tag:blogger.com,1999:blog-987786588703208935.post-7926064083798387413
+blogger_orig_url: http://bxm-dev.blogspot.com/2007/03/continuous-integration-with-hudson.html
+---
+
+The more I use <a href="http://cruidecontrol.sourceforge.net/">CruiseControl</a>, the more I am annoyed by it limited functions:<br /><ul><li>it seems to have troubles with large logfiles and a big number of JUnit test results - at least I always get an OutOfMemoryError when CruiseControl tries to parse the XML files</li><li>it can just monitor the exit code of a build script. For example, I want to receive an email if some JUnit tests have failed (while the build itself did succeed) - not possible with CruiseControl</li><li>and some other issues I don't remember right now.</li></ul>Thats why I will have a look at <a href="https://hudson.dev.java.net/">Hudson</a>: Also open-source, but more flexible...<br /><h3>Update</h3>The main advantage about Hudson: It is very easy to use (setup took me about a minute).<br />However, having a running CruiseControl, I see no reason for a change - in fact, I like CruiseControl's minimalistic web interface better...<br />But for a newbie on continuous integration tools, I would suggest to start with Hudson.<br /><div class="item_footer"><small><a href="http://bxm.at/blogs/java/continuous_integration_with_hudson">Original post</a> blogged on <a href="http://b2evolution.net/">b2evolution</a>.</small></div>

@@ -1,0 +1,14 @@
+---
+layout: post
+title: Transactions with Spring and Hibernate
+date: '2007-02-05T09:06:00.000+01:00'
+author: martin
+tags:
+- hibernate
+- spring
+modified_time: '2012-04-17T00:16:24.188+02:00'
+blogger_id: tag:blogger.com,1999:blog-987786588703208935.post-8903492366765706257
+blogger_orig_url: http://bxm-dev.blogspot.com/2007/02/transactions-with-spring-and-hibernate.html
+---
+
+This explains how to work with "User Transactions" when using the Spring base-class for Hibernate operations, <a href="http://static.springframework.org/spring/docs/1.2.x/api/org/springframework/orm/hibernate3/support/HibernateDaoSupport.html"><code>HibernateDaoSupport</code></a>.<br />The goal is to deal with transactions like this:<br /><blockquote><pre class="brush:xml">public void doSomething() {<br />    Transaction txn = null;<br />    try {<br />        txn = getTransaction();<br />        txn.begin();<br />        // do something here<br />        if (txn.isActive()) txn.commit();<br />    } catch (Exception e) {<br />        try {<br />            txn.rollback();<br />        } catch (Exception ignore) {}<br />        throw e;<br />    } finally {<br />        freeTransaction();<br />    }<br />}</pre></blockquote><br /><br /><br /><br />The follwoing method returns a <code>org.hibernate.Transaction</code> object that contains the expected methods for transaction handling, like <code>begin()</code>, <code>commit()</code>, and <code>rollback</code>:<br /><br /><blockquote><pre class="brush:xml">protected final Transaction getTransaction() {<br />    Session session = getSession();<br />    SessionFactory factory = getSessionFactory();<br />    if (TransactionSynchronizationManager.getResource(factory) == null) {<br />        TransactionSynchronizationManager.bindResource(factory,<br />                new SessionHolder(session));<br />    }<br />    return session.getTransaction();<br />}</pre></blockquote><br /><br />When the transaction is no longer needed, its resources should be freed:<br /><br /><blockquote><pre class="brush:xml">protected final void freeTransaction() {<br />    try {<br />        TransactionSynchronizationManager.unbindResource(getSessionFactory());<br />    } catch (Exception ignore) {}<br />    try {<br />        getSession().close();<br />    } catch (Exception ignore) {}<br />}</pre></blockquote><div class="item_footer"><small><a href="http://bxm.at/blogs/java/transactions_mit_spring_und_hibernate">Original post</a> blogged on <a href="http://b2evolution.net/">b2evolution</a>.</small></div>

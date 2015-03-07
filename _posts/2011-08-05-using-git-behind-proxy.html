@@ -1,0 +1,13 @@
+---
+layout: post
+title: Using Git behind a proxy
+date: '2011-08-05T22:05:00.000+02:00'
+author: martin
+tags:
+- git
+modified_time: '2013-11-20T09:58:39.967+01:00'
+blogger_id: tag:blogger.com,1999:blog-987786588703208935.post-1268498321322124718
+blogger_orig_url: http://bxm-dev.blogspot.com/2011/08/using-git-behind-proxy.html
+---
+
+Statements to clone a Git repository (via HTTPS) when using a proxy server (tested with msysgit under Windows XP):<br /><blockquote class="tr_bq"><pre class="brush:xml">set https_proxy=[proxyuser]:[proxypassword]@[proxyhostname]:[proxyport] <br />git config --global --add http.sslverify false <br />git clone https://martoe@github.com/martoe/svn-tag.git<br /></pre></blockquote><br /><h3>Update:</h3>Instead of&nbsp; "set https_proxy=...", you may also use<br /><blockquote class="tr_bq"><span style="font-family: &quot;Courier New&quot;,Courier,monospace; font-size: x-small;"><span style="font-size: small;">git config --global http.proxy [proxystring as above]</span></span></blockquote>

@@ -1,0 +1,13 @@
+---
+layout: post
+title: Spring Transaction Pitfalls
+date: '2009-03-28T22:10:00.000+01:00'
+author: martin
+tags:
+- spring
+modified_time: '2012-04-16T14:55:41.691+02:00'
+blogger_id: tag:blogger.com,1999:blog-987786588703208935.post-4441059352698264408
+blogger_orig_url: http://bxm-dev.blogspot.com/2009/03/spring-transaction-pitfalls.html
+---
+
+<p><a href="http://www.ibm.com/developerworks/java/library/j-ts1.html">Understanding transaction pitfalls</a> contains some must-know hints about transaction handling, especially when using ORM mappers.<br />For example, the <code>readOnly=true</code> attribute is quite useless, and without an explicit <code>propagation=Propagation.SUPPORTS</code> it even has a negative impact on performance&#8230;</p><p>As soon as tehre is time, I will check out the whole <a href="http://www.ibm.com/developerworks/views/java/libraryview.jsp?search_by=transaction+strategies:">Transaction Strategies</a> series.</p><div class="item_footer"><p><small><a href="http://bxm.at/blogs/java/spring-transaction-pitfalls">Original post</a> blogged on <a href="http://b2evolution.net/">b2evolution</a>.</small></p></div>
