@@ -9,6 +9,7 @@ tags:
 modified_time: '2011-12-02T15:04:41.501+01:00'
 blogger_id: tag:blogger.com,1999:blog-987786588703208935.post-4220189781248971882
 blogger_orig_url: http://bxm-dev.blogspot.com/2011/08/developing-jenkins-ci-plugins.html
+category: dev
 ---
 
 How to improve an existing <a href="https://wiki.jenkins-ci.org/display/JENKINS/Home">Jenkins-CI</a> plugin - a cheat sheet (using the <a href="https://wiki.jenkins-ci.org/display/JENKINS/Subversion+Tagging+Plugin">SVN-Tag plugin</a> as example):<br /><ol><li>Fork <a href="https://github.com/jenkinsci/svn-tag-plugin">https://github.com/jenkinsci/svn-tag-plugin</a></li><li>Create a local repo:<br /><pre class="brush:xml">git clone git@github.com:martoe/svn-tag-plugin.git<br />cd svn-tag-plugin<br />git remote add upstream https://github.com/jenkinsci/svn-tag-plugin.git<br />git pull upstream master</pre></li><li>Change settings.xml according to the <a href="https://wiki.jenkins-ci.org/display/JENKINS/Plugin+tutorial#Plugintutorial-SettingUpEnvironment">Plugin tutorial</a></li><li>Import the project into eclipse</li><li>Run “mvn install”</li></ol><div class="item_footer"><small><a href="http://bxm.at/blogs/java/developing-jenkins-ci-plugins">Original post</a> blogged on <a href="http://b2evolution.net/">b2evolution</a>.</small></div>

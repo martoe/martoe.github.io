@@ -7,6 +7,7 @@ tags:
 modified_time: '2012-04-17T00:16:24.165+02:00'
 blogger_id: tag:blogger.com,1999:blog-987786588703208935.post-1743432826544696654
 blogger_orig_url: http://bxm-dev.blogspot.com/2009/11/refactor-code-for-java-5.html
+category: dev
 ---
 
 <p>A checklist for tasks that could be performed on an existing Java 2 sourcecode when migrating to Java 5+:</p><ul><li>use Generics always and everywhere</li><li>use autoboxing (remove all &#8220;new Integer&#8221; etc)</li><li>replace overloaded methods with var-args</li><li>use Enums instead of integer constants</li></ul><table><tr><th>Replace class&#8230; &nbsp;</th><th>&#8230;with class&#8230; &nbsp;</th><th>&#8230;because&#8230;</th></tr><tr><td>StringBuffer</td><td>StringBuilder</td><td>better performance (not threadsafe)</td></tr><tr><td>BufferedWriter, FileWriter</td><td>PrintWriter</td><td>enhanced formatting</td></tr><tr><td>StringTokenizer</td><td>Scanner</td><td>includes parsing</td></tr><tr><td>Iterator</td><td>Iterable</td><td>(for APIs) enhanced &#8220;for&#8221; loop can be used</td></tr></table><div class="item_footer"><p><small><a href="http://bxm.at/blogs/java/refactor-code-for-java-5">Original post</a> blogged on <a href="http://b2evolution.net/">b2evolution</a>.</small></p></div>

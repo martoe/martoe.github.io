@@ -10,6 +10,7 @@ tags:
 modified_time: '2012-04-17T00:09:49.821+02:00'
 blogger_id: tag:blogger.com,1999:blog-987786588703208935.post-4632436213835547752
 blogger_orig_url: http://bxm-dev.blogspot.com/2009/08/upgrading-to-sonar-192.html
+category: dev
 ---
 
 <p>Today I upgraded my <a href="http://sonar.codehaus.org">Sonar</a> installation (running with Tomcat 6.0.14) from V1.8 to V1.9.2 (because of a FindBugs problem: <a href="http://jira.codehaus.org/browse/SONAR-651">http://jira.codehaus.org/browse/SONAR-651</a> ).</p><p>The steps I had to perform:</p><ul><li>Edit the <code>conf/sonar.properties</code> file to use Oracle instead of Derby</li><li>Edit the <code>war/build.xml</code> file:<br />Replace line 42 <code class="codespan">&lt;war destfile="sonar.war"&gt;</code> with<br /><code class="codespan">&lt;war destfile="sonar.war" webxml="build/sonar-web/WEB-INF/web.xml"&gt;</code></li><li>Execute <code>war/build-war.bat</code></li><li>Stop Tomcat and delete the following files (to get rid of an error similar to <a href="http://jira.codehaus.org/browse/SONAR-916">http://jira.codehaus.org/browse/SONAR-916</a> ):<br />  <ul>    <li>TOMCAT_HOME/temp/*</li>    <li>TOMCAT_HOME/webapps/sonar</li>    <li>TOMCAT_HOME/work/*</li>  </ul></li><li>Copy <code>war/sonar.war</code> to <code>TOMCAT_HOME/webapps</code></li><li>Start Tomcat and launch the Sonar homepage</li> </ul><div class="item_footer"><p><small><a href="http://bxm.at/blogs/java/upgrading-to-sonar-1-9-2">Original post</a> blogged on <a href="http://b2evolution.net/">b2evolution</a>.</small></p></div>

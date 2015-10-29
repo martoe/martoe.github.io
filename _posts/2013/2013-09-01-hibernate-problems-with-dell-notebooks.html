@@ -8,6 +8,7 @@ tags:
 modified_time: '2013-09-01T15:45:25.297+02:00'
 blogger_id: tag:blogger.com,1999:blog-987786588703208935.post-3463002832210807938
 blogger_orig_url: http://bxm-dev.blogspot.com/2013/09/hibernate-problems-with-dell-notebooks.html
+category: dev
 ---
 
 A few month ago, I used the system restore disk to reset my old <a href="http://www.dell.com/support/drivers/us/en/19/Product/inspiron-1570">Dell Inspiron 1570</a> notebook. Since then, the powersaving functions (suspend and hibernate) didn’t work properly: every now and then, the notebook won’t wake up (or, to be more specific: it sounded like it did wake up, but the screen stays black).<br />I never put much effort into solving this problem, but recently I received my new <a href="http://www.dell.com/at/unternehmen/p/latitude-6430u-ultrabook/pd">Latitude 6430u</a> ultrabook, and it turned out that it has exactly the same problems.<br />Luckily, I found <a href="http://lawyerist.com/dell-latitute-6430u-ultrabook-review/">this review</a> which guided me to the origin of this behaviour: the pre-installed “Intel PROSet/Wireless Software”. I uninstalled this software (for the Inspiron I had to re-install the Wifi driver, and for the Latitude I had to re-install the bluetooth driver afterwards), and all my problems where gone…

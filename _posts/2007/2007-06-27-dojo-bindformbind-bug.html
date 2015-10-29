@@ -8,6 +8,7 @@ tags:
 modified_time: '2012-04-29T10:50:22.625+02:00'
 blogger_id: tag:blogger.com,1999:blog-987786588703208935.post-6838903868184569515
 blogger_orig_url: http://bxm-dev.blogspot.com/2007/06/dojo-bindformbind-bug.html
+category: dev
 ---
 
 When using <code>dojo.io.bind</code> (or <code>dojo.io.FormBind</code>, which is the <a href="http://manual.dojotoolkit.org/WikiHome/DojoDotBook/Book23">preferred way</a>) to submit a form, make sure the form contains no form fields named “method” or “action".<br />“method” fails in both IE6 and Firefox2, because Dojo expects “myForm.method” to be the HTTP method string ("get or “post") rather than a formfield (see BrowserIO.js).<br />An “action” field failed only in IE6 for reasons that are not clear to me, the error message isn’t very helpful: “[TypeError] when calling submit$joinpoint$method on [object Object] with arguments [object Object]” (thrown in common.js)<br />Dojo version 0.4.1 (but still not fixed in 0.4.3)<br /><div class="item_footer"><small><a href="http://bxm.at/blogs/java/dojo_bind_formbind_bug">Original post</a> blogged on <a href="http://b2evolution.net/">b2evolution</a>.</small></div>

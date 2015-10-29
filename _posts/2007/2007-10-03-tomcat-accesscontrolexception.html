@@ -7,6 +7,7 @@ tags:
 modified_time: '2012-04-16T14:55:41.669+02:00'
 blogger_id: tag:blogger.com,1999:blog-987786588703208935.post-2028802045428169804
 blogger_orig_url: http://bxm-dev.blogspot.com/2007/10/tomcat-accesscontrolexception.html
+category: dev
 ---
 
 <p>Recently, my Tomcat 6 Development system decided not to start up anymore, but to throw this ugly exception instead:</p><pre class="brush:xml">03.10.2007 14:29:12 org.apache.tomcat.util.modeler.Registry registerComponent<br />SCHWERWIEGEND: Error registering Catalina:j2eeType=WebModule,name=//localhost/MACHacmsg,J2EEApplication=none,J2EEServer=none<br />java.security.AccessControlException: access denied (javax.management.MBeanTrustPermission register)<br />&#160;&#160;at java.security.AccessControlContext.checkPermission(AccessControlContext.java:323)<br />&#160;&#160;at java.lang.SecurityManager.checkPermission(SecurityManager.java:568)<br />[...]<br /></pre><p>No idea why, but i fixed it by adding the following line in the &#8220;grant&#8221; section of JRE&#8217;s lib/security/java.policy file:</p><pre class="brush:xml">permission javax.management.MBeanTrustPermission "register";<br /></table></div><div class="item_footer"><p><small><a href="http://bxm.at/blogs/java/tomcat_accesscontrolexception">Original post</a> blogged on <a href="http://b2evolution.net/">b2evolution</a>.</small></p></div>

@@ -7,6 +7,7 @@ tags:
 modified_time: '2014-06-30T08:59:01.463+02:00'
 blogger_id: tag:blogger.com,1999:blog-987786588703208935.post-7380191445258319345
 blogger_orig_url: http://bxm-dev.blogspot.com/2014/06/using-vagrant-behind-corporate-proxy.html
+category: dev
 ---
 
 1. install <a href="https://github.com/tmatilai/vagrant-proxyconf">vagrant-proxyconf</a> plugin<br /><blockquote class="tr_bq">set http_proxy=http://username:password@hostname:port<br />vagrant plugin install vagrant-proxyconf</blockquote><br />2. configure the vagrant-proxyconf plugin<br /><blockquote class="tr_bq">Create or edit file $HOME/.vagrant.d/Vagrantfile<br /><br />Vagrant.configure("2") do |config|<br />&nbsp; if Vagrant.has_plugin?("vagrant-proxyconf")<br />&nbsp;&nbsp;&nbsp; config.proxy.http&nbsp;&nbsp;&nbsp;&nbsp; = "http://username:password@hostname:port/"<br />&nbsp;&nbsp;&nbsp; config.proxy.https&nbsp;&nbsp;&nbsp; = "http://username:password@hostname:port/"<br />&nbsp;&nbsp;&nbsp; config.proxy.no_proxy = "localhost,127.0.0.1,.example.com"<br />&nbsp; end<br />end</blockquote><br />3. download box and start vagrant<br /><blockquote class="tr_bq">set HTTPS_PROXY=http://username:password@hostname:port<br />vagrant up</blockquote><br />

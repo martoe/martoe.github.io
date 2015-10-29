@@ -8,6 +8,7 @@ tags:
 modified_time: '2012-04-17T00:16:24.161+02:00'
 blogger_id: tag:blogger.com,1999:blog-987786588703208935.post-1440259104399842040
 blogger_orig_url: http://bxm-dev.blogspot.com/2007/04/maven-241-bug.html
+category: dev
 ---
 
 <p>Under some circumstances, Maven fails to resolve dependencies with version "${project.version}" - instead of using the project version, it tries to lookup version "2.4.1".</p><p>As stated <a href="http://www.nabble.com/Workaround-for-%22Version-2.4.1%22-bug-t2929787.html">here</a> and <a href="http://jira.codehaus.org/browse/MNG-2653">here</a>, the reason for this is a "version" system property that is set by JDK 1.4.2 and kind of overwrites "project.version".</p><p>I stumbled across this problem in two situations:</p><ul>  <li>When using the Maven dependency mechanism in an Ant script. The problem has to do with the "xslt" (or "style") Ant task, so the quick resolution is:<br />Call all "dependencies" tasks before any "xslt" or "style" tag :-/<br />  </li>  <li>When using the <a href="http://m2eclipse.codehaus.org/">Maven Eclipse plugin</a>. Workaround: Use Java 5 as Eclipse runtime environment.<br />  </li></ul><div class="item_footer"><p><small><a href="http://bxm.at/blogs/java/maven_version_2_4_1_bug">Original post</a> blogged on <a href="http://b2evolution.net/">b2evolution</a>.</small></p></div>

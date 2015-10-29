@@ -2,7 +2,7 @@
 layout: post
 title:  "Sourcefile Encoding with Gradle"
 date:   2015-02-28 20:00:00
-categories: dev
+category: dev
 tags: gradle
 comments: True
 ---
