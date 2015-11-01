@@ -14,6 +14,8 @@
         cd PortableJekyll
         setpath.cmd
         cd ..\martoe.github.io
+        gem install bundler
+        bundle install
         jekyll serve --drafts
 
 1. Open [localhost:4000](http://localhost:4000/)
