@@ -7,11 +7,11 @@ description: Java development, continuous integration, stuff.
 #logo: site-logo.png
 search: true
 #baseurl: ""
-#url: "https://martoe.github.io"
+#url: http://blog.ehrnhoefer.com
 
 # Jekyll configuration
 
-permalink:   /:categories/:title/
+permalink:   ":year-:month-:day-:title/"
 markdown:    kramdown
 highlighter: pygments
 sass:
@@ -39,10 +39,10 @@ owner:
   name: Martin Ehrnhöfer
 #  avatar: bio-photo.jpg
 #  email: you@email.com
-  disqus-shortname:
-  twitter: #username
+  disqus-shortname: ehrnhofer
+  twitter: mehrnh
   facebook: #username
-  github: #username
+  github: #martoe
   stackexchange: #http://stackoverflow.com/users/123456/username
   linkedin: #username
   instagram: #username
