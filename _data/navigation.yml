@@ -1,10 +1,13 @@
 # Site navigation links
 
 - title: Home
-  url: http://ehrnhoefer.com
+  url: https://ehrnhoefer.com/#/
 
 - title: Dev Blog
   url: /
+
+- title: Tags
+  url: /tags/
 
 - title: Outdoor
   url: /outdoor/
