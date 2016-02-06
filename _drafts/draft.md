@@ -1,8 +1,8 @@
 ---
-layout: post
-title:  "Title"
+layout:   post
+title:    "Title"
 category: dev
-#tags:
+tags:     CI ant blog books dell devops dojo eclipse git gradle groovy hibernate intellij java jenkins maven quality shownotes sonar spring testing
 comments: true
 ---
 Markdown contents
