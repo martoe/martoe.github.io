@@ -9,13 +9,21 @@
         git clone git@github.com:madhur/PortableJekyll.git
         git clone git@github.com:martoe/martoe.github.io.git
 
-1. Start Jekyll:
+1. Prepare Jekyll (as of Feb 2016, GitHub Pages uses Jekyll 3.0):
 
         cd PortableJekyll
+        git checkout 3.0.0
         setpath.cmd
         cd ..\martoe.github.io
         gem install bundler
         bundle install
+        bundle update
+
+1. Start Jekyll (as of Feb 2016, GitHub Pages uses Jekyll 3.0):
+
+        cd PortableJekyll
+        setpath.cmd
+        cd ..\martoe.github.io
         jekyll serve --drafts
 
 1. Open [localhost:4000](http://localhost:4000/)
