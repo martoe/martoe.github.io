@@ -13,7 +13,7 @@ search: true
 
 permalink:   ":year-:month-:day-:title/"
 markdown:    kramdown
-highlighter: pygments
+highlighter: rouge # supported by GitHub pages
 sass:
   sass_dir: _sass
   style: compressed
