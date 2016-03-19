@@ -17,13 +17,13 @@ So, this is a short documentation of my steps to a dockerized Jenkins 2.0 instan
 1. Create and start a new Jenkins container with `docker run -p 8080:8080 -p 50000:50000 jenkinsci/jenkins:2.0-alpha-3`. After the image download, Jenkins initializes and starts within 20 seconds. Wait until the security token appears at the console.
 1. Open http://192.168.99.100:8080/ in a browser (find out the real IP address with `docker-machine ip`) and enter the security token. Welcome to Jenkins 2.0 :-)
 1. Now remove the container again
+
     ```
     docker ps
     docker inspect <id>
     docker stop <id>
     docker rm <id>
     ```
-
 
 ## Lesson #2: Write the Jenkins workspace to a local (Windows) directory
 
@@ -40,12 +40,13 @@ Notes:
 * Even local (Windows) filenames are case sensitive.
 * see https://docs.docker.com/engine/userguide/containers/dockervolumes/
 * using the `--name` option, it is easier to reference the container later:
-        ```
-        docker start jenkins2
-        docker exec -i -t jenkins2 bash
-        docker stop jenkins2
-        docker rm jenkins2
-        ```        
+
+```
+docker start jenkins2
+docker exec -i -t jenkins2 bash
+docker stop jenkins2
+docker rm jenkins2
+```        
 
 ## Lesson #3: Write the Jenkins workspace to a data volume (for better performance)
 
