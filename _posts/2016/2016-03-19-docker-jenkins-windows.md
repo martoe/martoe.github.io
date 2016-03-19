@@ -19,12 +19,12 @@ So, this is a short documentation of my steps to a dockerized Jenkins 2.0 instan
 1. Now remove the container again
 
 
-
-    docker ps
-    docker inspect <id>
-    docker stop <id>
-    docker rm <id>
-
+```
+docker ps
+docker inspect <id>
+docker stop <id>
+docker rm <id>
+```
 
 ## Lesson #2: Write the Jenkins workspace to a local (Windows) directory
 
