@@ -1,0 +1,50 @@
+Cross compilation with Gradle:
+
+	sourceCompatibility = "1.6"
+	configurations {
+	  bootClasspath
+	}
+	dependencies {
+	  bootClasspath "com.sun:rt:1.6.0_45"
+	  bootClasspath "javax.crypto:jce:1.6"
+	}
+	tasks.withType(JavaCompile) {
+	  options.bootClasspath = configurations.bootClasspath.asPath
+	}
+
+
+ant-scp with gradle
+===================
+
+configurations {
+  antLibs
+}
+
+ant.antversion(property: "_antversion")
+ext.antVersion = ant.properties["_antversion"]
+
+dependencies {
+  antLibs("com.jcraft:jsch:0.1.51")
+  antLibs("org.apache.ant:ant-jsch:$antVersion") { transitive = false }
+}
+
+task scpSample << {
+  ant.taskdef(name: "scp", classname: "org.apache.tools.ant.taskdefs.optional.ssh.Scp", classpath: configurations.antLibs.asPath)
+  ant.scp(todir: "[username]:[password]@[hostname]:[remoteDir]", trust: true) {
+    fileset(dir: "[uploadDir]")
+  }
+}
+
+---
+
+dependencies {
+  antLibs("commons-net:commons-net:1.4.0")
+  antLibs("org.apache.ant:ant-commons-net:$antVersion") { transitive = false }
+}
+
+task ftpSample << {
+  ant.taskdef(name: "ftp", classname: "org.apache.tools.ant.taskdefs.optional.net.FTP", classpath: configurations.antLibs.asPath)
+  ant.ftp(server: "[hostname]", userid: "[username]", password: "[password]", verbose: "yes", remotedir: "[remoteDir]") {
+    fileset(dir: "[uploadDir]")
+  }
+}
