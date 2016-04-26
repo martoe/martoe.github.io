@@ -33,7 +33,7 @@ docker rm <id>
     mkdir docker/jenkins
     docker run --name jenkins2 -p 8080:8080 -p 50000:50000 -v ~/docker/jenkins:/var/jenkins_home jenkinsci/jenkins:2.0-alpha-3
 
-The first startup takes about 7 minutes(!), the following startup is much faster (which means that writing to the host filesystem is pretty slow on Windows) 
+The first startup takes about 7 minutes(!), the following startup is much faster (which means that writing to the host filesystem is pretty slow on Windows)
 
 Notes:
 
@@ -49,7 +49,7 @@ docker start jenkins2
 docker exec -i -t jenkins2 bash
 docker stop jenkins2
 docker rm jenkins2
-```        
+```
 
 ## Lesson #3: Write the Jenkins workspace to a data volume (for better performance)
 
@@ -60,7 +60,4 @@ docker rm jenkins2
 AFAIK it is not possible to directly access the files inside the data container.
 But we can always launch another container, mount both the data volume and a local directory, and copy the files:
 
-    docker run -v jenkins-data:/var/jenkins_home -v ~/docker:/backup debian tar czf /backup/jenkins-backup.tgz /var/jenkins_home/*
-
-
-
+    docker run -v jenkins-data:/var/jenkins_home -v ~/docker:/backup debian tar czf /backup/jenkins-backup.tgz /var/jenkins_home
