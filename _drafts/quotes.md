@@ -8,6 +8,12 @@ comments: true
 
 A collection of various quotations, idioms, and aphorisms - not exclusively related to software development, and not to be taken 100 percent seriously ;-)
 
+## Boehm's First Law
+
+Errors are most frequent during the requirements and design activities and are the more expensive the later they are removed.
+
+(from [some blog](http://kazimabdullah.blogspot.co.at/2013/04/laws-of-software-development.html))
+
 ## Clarke's laws
    
 1. When a distinguished but elderly scientist states that something is possible, he is almost certainly right. When he states that something is impossible, he is very probably wrong.
@@ -67,5 +73,6 @@ to be continued...
 
 #### References
 
-*  Jeff Atwood on [programming jargon](https://blog.codinghorror.com/new-programming-jargon/)
+* Jeff Atwood on [programming jargon](https://blog.codinghorror.com/new-programming-jargon/)
 * Wikipedia's [list of eponymous laws](https://en.wikipedia.org/wiki/List_of_eponymous_laws)
+* [Programming Laws and Reality](http://www.drdobbs.com/architecture-and-design/programming-laws-and-reality-do-we-know/240166164)
