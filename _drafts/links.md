@@ -15,3 +15,13 @@ comments: true
         * the reason why programmers are antisocial -> 01:03
         * "...the person that uses all the tools is called a consultant" 01:07
         
+
+# Architecture
+
+### Microservices
+
+* [Microservices, Monoliths, and Modularity](https://genehughson.wordpress.com/2017/03/31/microservices-monoliths-and-modularity/) (07/2017)
+    * Don't use microservices to force modularization of a monolith
+* [Self Contained Systems: Microservices Done Right](https://www.infoq.com/articles/scs-microservices-done-right) (07/2017)
+    * Bounded contexts (not domain/data objects!) as starting point for modularization
+    
