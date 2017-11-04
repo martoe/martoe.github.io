@@ -25,3 +25,14 @@ comments: true
 * [Self Contained Systems: Microservices Done Right](https://www.infoq.com/articles/scs-microservices-done-right) (07/2017)
     * Bounded contexts (not domain/data objects!) as starting point for modularization
     
+
+
+# Design/Clean Code
+
+* [Kent Becks Rules for Simple Design](http://wiki.c2.com/?XpSimplicityRules) (09/2017, via Venkat - eJUG)
+    * The Code (ordered by priority)...
+        * ...passes all tests
+        * ...reveals its intetions
+        * ...doesn't contain duplications
+        * ...has only minimal methods, classes etc.
+    * See also [Martin Fowler](https://martinfowler.com/bliki/BeckDesignRules.html)
