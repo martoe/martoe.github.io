@@ -24,7 +24,9 @@ comments: true
     * Don't use microservices to force modularization of a monolith
 * [Self Contained Systems: Microservices Done Right](https://www.infoq.com/articles/scs-microservices-done-right) (07/2017)
     * Bounded contexts (not domain/data objects!) as starting point for modularization
-    
+* [On Monoliths and Microservices](https://dev.otto.de/2015/09/30/on-monoliths-and-microservices/) (02/2018)
+    * Why moving from a monolith to microservices?
+    * Despription of a modular architecture
 
 
 # Design/Clean Code
