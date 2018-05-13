@@ -1,0 +1,11 @@
+---
+layout: page
+search_omit: true
+---
+
+<h2 id="sticky">Sticky Posts</h2>
+<ul class="post-list">
+{% for post in site.categories.sticky limit:100 %}
+  <li><article><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></article></li>
+{% endfor %}
+</ul>
