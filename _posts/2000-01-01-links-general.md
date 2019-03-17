@@ -13,6 +13,7 @@ tags: links
     * [Wetterkarte 500hPa](https://www.wetteronline.de/profiwetter/europa?parameter=z500)
     * [DWD Prognosekarten](https://www.dwd.de/DE/leistungen/hobbymet_wk_europa/hobbyeuropakarten.html)
     * [Multimodell Wien](https://www.meteoblue.com/de/wetter/vorhersage/multimodel/wien_%c3%96sterreich_2761369)
+    * [Aktuelle Gewitterkarte](https://mobile.aldis.at/mobile-gewitterkarte.htm) (mobile)
 * [World Population in 2018](https://ourworldindata.org/world-population-cartogram)
     * Weltkarte, auf der die Größe eines Landes der Bevölkerungszahl entspricht
 * [On the Phenomenon of Bullshit Jobs: A Work Rant](https://strikemag.org/bullshit-jobs/)
