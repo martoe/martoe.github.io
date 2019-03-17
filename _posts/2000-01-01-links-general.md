@@ -1,10 +1,11 @@
 ---
 layout:   post
-title:    "Links"
-category: dev
-comments: true
+title:    "Off-Topic Links"
+category: sticky
+tags: links
 ---
 
+# Unsorted Stuff
 
 * [Big Data - Vermessung des Menschen](http://www1.wdr.de/radio/wdr5/sendungen/philosophisches-radio/rainer-muehlhoff-100.html) (09/2017)
     * Social physics, Modellierung von Menschen als Schwarmtiere, Manipulation durch Facebook & co, Digitale Aufklärung
@@ -22,6 +23,10 @@ comments: true
 
 * [Youtube-Downloader](https://rg3.github.io/youtube-dl/) and [GUI](https://github.com/MrS0m30n3/youtube-dl-gui)
 * [TrID File Identifier](http://mark0.net/soft-trid-e.html) to determine the file type from the binary contents
+* [WinStatDir](https://windirstat.net/) to analyse diskspace at directory-level
+* [Windows apps for hardware analysis](https://www.heise.de/select/ct/2017/18/1503951385553696)
+* [Recuva](https://www.ccleaner.com/recuva) to recover deleted files
+* [Various Windows utilities](https://www.heise.de/select/ct/2017/18/1503949210094577)
 
 # Knowledge Base
 
