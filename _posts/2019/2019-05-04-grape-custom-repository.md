@@ -10,7 +10,7 @@ Just add `@Grab('groupid:artifactid:version')` on top of your script, and the sp
 
 However, if you are forced to use a different repository server (like a private Artifactory or Nexus service), the documentation is not very exhaustive.
 
-Grape uses [Ivy](https://ant.apache.org/ivy/) behind the scenes, so the key is to provide your own [custom Ivy settings](http://docs.groovy-lang.org/latest/html/documentation/grape.html#Grape-CustomizeIvysettings) in a file called ` ~/.groovy/grapeConfig.xml`. In the following example, Grape will use a Maven repository located at `http://artifactory.local/libs-release` to download artifacts:
+Grape uses [Ivy](https://ant.apache.org/ivy/) behind the scenes, so the key is to provide your own [custom Ivy settings](http://docs.groovy-lang.org/latest/html/documentation/grape.html#Grape-CustomizeIvysettings) in a file called `~/.groovy/grapeConfig.xml`. In the following example, Grape will use a Maven repository located at `http://artifactory.local/libs-release` to download artifacts:
 
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
