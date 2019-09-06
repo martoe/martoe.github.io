@@ -10,9 +10,10 @@ tags: links
 * [Big Data - Vermessung des Menschen](http://www1.wdr.de/radio/wdr5/sendungen/philosophisches-radio/rainer-muehlhoff-100.html) (09/2017)
     * Social physics, Modellierung von Menschen als Schwarmtiere, Manipulation durch Facebook & co, Digitale Aufklärung
 * Wetter
-    * [Wetterkarte 500hPa](https://www.wetteronline.de/profiwetter/europa?parameter=z500)
+    * [ZAMG Wetteranimation](https://www.zamg.ac.at/cms/de/wetter/wetteranimation) (grafische Prognosekarte Temperatur, Niederschlag)
+    * [Wetterkarte Europa 500hPa](https://www.wetteronline.de/profiwetter/europa?parameter=z500) (plus Niederschlagskarte, Prognose für mehrere Tage)
     * [DWD Prognosekarten](https://www.dwd.de/DE/leistungen/hobbymet_wk_europa/hobbyeuropakarten.html)
-    * [Multimodell Wien](https://www.meteoblue.com/de/wetter/vorhersage/multimodel/wien_%c3%96sterreich_2761369)
+    * [Multimodell Wien](https://www.meteoblue.com/de/wetter/vorhersage/multimodel/wien_%c3%96sterreich_2761369)|[Hohe Wand](https://www.meteoblue.com/de/wetter/vorhersage/multimodel/hohe-wand_%c3%96sterreich_2775656)|[Schneeberg](https://www.meteoblue.com/de/wetter/vorhersage/multimodel/puchberg-am-schneeberg_%c3%96sterreich_2768279)|[Rax](https://www.meteoblue.com/de/wetter/vorhersage/multimodel/reichenau-an-der-rax_%c3%96sterreich_2767777)
     * [Aktuelle Gewitterkarte](https://mobile.aldis.at/mobile-gewitterkarte.htm) (mobile)
 * [World Population in 2018](https://ourworldindata.org/world-population-cartogram)
     * Weltkarte, auf der die Größe eines Landes der Bevölkerungszahl entspricht
