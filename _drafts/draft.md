@@ -3,7 +3,7 @@ layout:   post
 excerpt_separator: <!--more-->
 title:    "Title"
 category: dev
-tags:     CI ant blog books dell devops docker dojo eclipse easticsearch git gradle groovy hibernate intellij java jboss jenkins maven quality shownotes sonar spring testing
+tags:     CI ant blog books dell devops docker dojo eclipse easticsearch git gradle groovy hibernate intellij java jboss jenkins linux maven quality shownotes sonar spring testing ubuntu
 comments: true
 ---
 Markdown contents
