@@ -19,7 +19,7 @@ tags: links
     * Weltkarte, auf der die Größe eines Landes der Bevölkerungszahl entspricht
 * [On the Phenomenon of Bullshit Jobs: A Work Rant](https://strikemag.org/bullshit-jobs/)
     > "in our society, there seems a general rule that, the more obviously one's work benefits other people, the less one is likely to be paid for it."
-
+* [Lockpicking](https://www.heise.de/select/ct/2019/16/1564487622250111)
 
 # Tools
 
