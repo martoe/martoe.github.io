@@ -1,7 +1,7 @@
 ---
 layout:   post
 excerpt_separator: <!--more-->
-title:    "What's New in Java X?"
+title:    "What's New in Java 8/9/10/11/12?"
 category: dev
 tags:     java
 comments: true
