@@ -8,6 +8,8 @@ comments: true
 ---
 Markdown contents
 
+[Reference]({{ site.baseurl }}{% post_url 2000-01-01-links %})
+
 {% highlight groovy %}
 source code
 {% endhighlight %}
