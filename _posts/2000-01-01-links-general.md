@@ -31,6 +31,7 @@ tags: links
 * [Windows apps for hardware analysis](https://www.heise.de/select/ct/2017/18/1503951385553696)
 * [Recuva](https://www.ccleaner.com/recuva) to recover deleted files
 * [Various Windows utilities](https://www.heise.de/select/ct/2017/18/1503949210094577)
+* [RouteConverter](https://www.routeconverter.de/home/en) - a simple editor for GPX tracks (download the [Linux](https://www.routeconverter.de/stable-releases/en) version - even on Windows! - and start it with `java -jar RouteConverterLinux.jar`)
 
 # Knowledge Base
 
