@@ -36,4 +36,4 @@ tags: links
 # Knowledge Base
 
 * [Uninstall Android System Apps](https://www.heise.de/select/ct/2018/26/1545033924627688) without rooting, using the Android Platform Tools
-
+* [Virtual VMs under Linux](https://www.heise.de/select/ct/2021/2/2026110042082113825)
