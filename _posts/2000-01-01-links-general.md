@@ -38,3 +38,9 @@ tags: links
 
 * [Uninstall Android System Apps](https://www.heise.de/select/ct/2018/26/1545033924627688) without rooting, using the Android Platform Tools
 * [Virtual VMs under Linux](https://www.heise.de/select/ct/2021/2/2026110042082113825)
+
+# Vienna ;-)
+
+* [A Glasl Rum stesst si söba ned um](https://www.youtube.com/watch?v=JhWKMzlzPxw)
+* [Pickup line](https://www.youtube.com/watch?v=kck9otA6YEw)
+* [Jo da Proda, joa da Proda, der redt mea ois a ko...](https://www.youtube.com/watch?v=SIvnP6bOSEc)
