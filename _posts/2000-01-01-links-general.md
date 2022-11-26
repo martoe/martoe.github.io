@@ -22,6 +22,7 @@ tags: links
     > "in our society, there seems a general rule that, the more obviously one's work benefits other people, the less one is likely to be paid for it."
 * [Letzte Rede von Matthias Strolz im Parlament](https://www.youtube.com/watch?v=1onNUiSQwkg) (09/2018)
 * [Lockpicking](https://www.heise.de/select/ct/2019/16/1564487622250111)
+* Mürzzuschlag [Events](https://www.meinbezirk.at/event/muerztal/list) und [Webcams](https://webcams.muerznet.at/) 
 
 
 # Tools
@@ -43,4 +44,4 @@ tags: links
 
 * [A Glasl Rum stesst si söba ned um](https://www.youtube.com/watch?v=JhWKMzlzPxw)
 * [Pickup line](https://www.youtube.com/watch?v=kck9otA6YEw)
-* [Jo da Proda, joa da Proda, der redt mea ois a ko...](https://www.youtube.com/watch?v=SIvnP6bOSEc)
+* [Jo da Proda, jo da Proda, der redt mea ois a ko...](https://www.youtube.com/watch?v=SIvnP6bOSEc)
